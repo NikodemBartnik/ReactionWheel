@@ -2,7 +2,6 @@
 Author: Nikodem Bartnik
 website: https://indystry.cc, https://nikodembartnik.pl
 email: nikodem@indystry.cc
-
 inspired by: https://github.com/remrc/One-Axis-Reaction-Wheel-Stick
 */
 
@@ -28,7 +27,6 @@ float Kp = 75;
 float Ki = 2;
 float Kd = 3;
 float loop_time = 10;
-
 
 //IMU offset values
 int16_t  AcX_offset = -750;
@@ -56,7 +54,6 @@ void setup() {
   pinMode(DIR, OUTPUT);
   analogWrite(MOTOR, 255);
 }
-
 
 void loop() {
   current_time = millis();
@@ -117,7 +114,6 @@ void angle_setup() {
 }
 
 void angle_calc() {
-
   Wire.beginTransmission(MPU6050);
   Wire.write(0x3B);
   Wire.endTransmission(false);
