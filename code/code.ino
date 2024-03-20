@@ -48,7 +48,7 @@ uint8_t i2cData[14];
 void setup() {
   delay(1000);
   angle_setup();
-  Serial.begin(115200);
+  Serial.begin(9600);
 
   pinMode(MOTOR, OUTPUT);
   pinMode(DIR, OUTPUT);
@@ -57,6 +57,7 @@ void setup() {
 
 void loop() {
   current_time = millis();
+  checkBluetooth();
   if (current_time - previous_time >= loop_time) {
     angle_calc();
     if (vertical) {
@@ -138,4 +139,32 @@ void angle_calc() {
 
   if (abs(current_angle) > 12) vertical = false;
   if (abs(current_angle) < 0.3) vertical = true;
+}
+
+void checkBluetooth(){
+while (Serial.available()) {
+    int data = Serial.read();
+    if (data == 70) {
+      //Forward
+      Kp += 1;
+    }else if(data == 66) {
+      //Backward
+      Kp -= 1;
+    }else if(data == 76){
+      Ki -= 0.1;
+    }else if(data == 82){
+      Ki += 0.1;
+    }else if(data == 88){
+      Kd += 0.1;
+    }else if(data == 89){
+      Kd -= 0.1;
+    }
+
+    Serial.print("KP: ");
+    Serial.print(Kp);
+    Serial.print(" KI: ");
+    Serial.print(Ki);
+    Serial.print(" KD: ");
+    Serial.println(Kd);
+}
 }
