@@ -14,18 +14,13 @@ inspired by: https://github.com/remrc/One-Axis-Reaction-Wheel-Stick
 #define MOTOR 9
 #define DIR 4
 
-//BEST VALUES
-// float Kp = 50;
-// float Ki = 0.2;
-// float Kd = 0.1;
-
-// float Kp = 68;
+// float Kp = 75;
 // float Ki = 2;
 // float Kd = 3;
 
-float Kp = 75;
-float Ki = 2;
-float Kd = 3;
+float Kp = 100;
+float Ki = 4.8;
+float Kd = 9.7;
 float loop_time = 10;
 
 //IMU offset values
@@ -74,12 +69,12 @@ void loop() {
       }
       analogWrite(MOTOR, 1-abs(motor_pwm));
 
-      if (current_angle > 0) {
-        target_angle -= 0.003;
-      } else {
-        target_angle += 0.00;
-      }
-      target_angle = constrain(target_angle, -1, 1);
+      // if (current_angle > 0) {
+      //   target_angle -= 0.003;
+      // } else {
+      //   target_angle += 0.00;
+      // }
+      // target_angle = constrain(target_angle, -1, 1);
 
       lastError = error;
       previous_time = current_time;
