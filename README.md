@@ -1,19 +1,21 @@
 # Reaction Wheel by Nikodem Bartnik
 ![DIY Reaction Wheel by Nikodem Bartnik](docs/thumbnail1.jpg)
-This repository contains the documentation and code for a personal project involving the creation of a reaction wheel system, along with a brief exploration of PID algorithms. The project stemmed from a fascination with the physics behind reaction wheels and a desire to experiment with their practical implementation.
+A long time ago I did a mistake and I started working on a reaction wheel project. It seemed simple after watching some youtube videos. It wasn't. I had to go through 4 or 5 attepmpts to finally finish the project. There was a lot of things I did wrong and a lot I learned.
+
+After building my DIY Arduino based drone a few years ago and now this reaction wheel I simply know that I am not good at buidling thinfs that are stable. But is it going to stop me from bulding more in the future? I don't think so.
 
 ## Overview
-The project began in 2017 with the construction of an Arduino-based drone from scratch, which laid the foundation for understanding PID algorithms. Over the course of three years, the focus shifted towards developing a reaction wheel system, driven by the challenge of mastering PID tuning and the allure of basic physics principles.
+The project was started in 2019 and the interrupted by other projects a lot. Very often I was just tired of working on it for few days without any progess. With all that negative introduction I just want to warn you that it's not the easiest of the projects to build and definitely not the one I would recommend to a beginner. 
 
-## Development Journey
-The development process involved iterative design, experimentation, and troubleshooting:
+## Parts
+Most parts are simply 3D printed. You will also need:
+* [Arduino Nano](https://amzn.to/49duqW5)- it's small and cheap so can be wasily soldered to a protoboard. I would advice using something small as it's easier to get smaller mass stable on the reaction wheel.
+* [Nidec24H brushless motor](https://s.click.aliexpress.com/e/_DFDXhbX) - I saw a lot of people online using this motor to build a reaction wheel. It has a lot of torque and comes with an integrated driver.
+* [MPU6050](https://amzn.to/3Tzr75X) - the cheapest and very popular accelerometer and gyroscope. It's tricky to get it working nicely, the data is not super clean but it works. Feel free to replace it with something of higher quality (it will be pricey)
+* [Protoboard](https://amzn.to/4cDcS8C) - protoboard of any size you want (you can always cut it down to size) will be useful to make a nice little board with all the components and stick to the back of your reaction wheel.
+* [Bluetooth module](https://amzn.to/3IZgXGY) - essential to tune the PID algorithm properly.
+* Other components: screws, nuts, lipo battery, cables
 
-* Initial Attempts: The project commenced with basic components such as Arduino Nano and MPU6050 sensor, assembled on a breadboard.
 
-* Challenges and Iterations: Multiple attempts were made to optimize the mechanical design and select appropriate motors, encountering obstacles such as insufficient torque and compatibility issues with sensors.
-
-* Persistence: Despite setbacks and periods of dormancy, the project persisted through redesigns and component replacements, driven by the determination to achieve stability in the reaction wheel.
-
-* Tuning PID Algorithms: The core challenge revolved around tuning PID algorithms for stability, necessitating extensive experimentation and adjustment of parameters.
-
-* Exploration of Bluetooth Integration: Consideration was given to integrating Bluetooth for remote parameter tuning, though it was ultimately not implemented.
+## Video about the project
+[![Reaction Wheel Video](https://img.youtube.com/vi/PdSDhdciSpE/0.jpg)](https://www.youtube.com/watch?v=PdSDhdciSpE)
