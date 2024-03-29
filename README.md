@@ -1,4 +1,5 @@
 # Reaction Wheel by Nikodem Bartnik
+![DIY Reaction Wheel by Nikodem Bartnik](docs/thumbnail1.jpg)
 This repository contains the documentation and code for a personal project involving the creation of a reaction wheel system, along with a brief exploration of PID algorithms. The project stemmed from a fascination with the physics behind reaction wheels and a desire to experiment with their practical implementation.
 
 ## Overview
